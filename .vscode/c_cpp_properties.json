@@ -1,0 +1,47 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "./libopencm3/include",
+                "./my-common-code",
+                "./usb-keyboard",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "./libopencm3/include",
+                    "./libopencm3/lib/",
+                    "./libopencm3/lib/cm3",
+                    "./libopencm3/lib/stm32",
+                    "./libopencm3/lib/stm32/common",
+                    "./libopencm3/lib/stm32/f4",
+                    "./libopencm3/lib/usb",
+                    "./my-common-code",
+                    "./usb-keyboard",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60111",
+                "STM32F4xx",
+                "STM32F411xE",
+                "INCLUDE_DFU_INTERFACE",
+                "STM32F4",
+                "F_CPU=100000000L",
+                "LIBOPENCM3_ST_USBFS_H",
+                ""
+            ],
+            "compilerPath": "C:/Users/alexa/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-gcc.exe",
+            "compilerArgs": [
+                "-mthumb",
+                "-mcpu=cortex-m4",
+                "-mfloat-abi=hard",
+                "-mfpu=fpv4-sp-d16",
+                ""
+            ]
+        }
+    ]
+}

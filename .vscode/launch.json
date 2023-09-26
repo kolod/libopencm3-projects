@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch USB Keyboard",
+            "request": "launch",
+            "type": "cortex-debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "./usb-keyboard/usb-keyboard.elf",
+            "servertype": "openocd",
+			"svdFile": "svd/STM32F411.svd",
+            "configFiles": ["board/stm32f411ce_blackpill_ftdi.cfg"],
+			"preLaunchTask": "Build USB Keyboard"
+        }
+    ]
+}

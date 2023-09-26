@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",    
+    "windows":{
+        "options": {
+            "shell": {
+                "executable": "${env:PROGRAMFILES}/Git/bin/bash.exe",
+                "args": ["--login", "-c"]
+            }
+        }
+    },
+    "tasks": [
+        {
+            "label": "Build libopencm3",
+            "type": "shell",
+            "group": "build",
+            "command": "make",
+            "args": ["-C", "libopencm3"],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build USB Keyboard",
+            "type": "shell",
+            "group": "build",
+            "command": "make",
+            "args": ["-C", "usb-keyboard"],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Clean USB Keyboard",
+            "type": "shell",
+            "group": "build",
+            "command": "make",
+            "args": ["-C", "usb-keyboard", "clean"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Flash USB Keyboard",
+            "type": "shell",
+            "command": "make",
+            "args": ["-C", "usb-keyboard", "flash"],
+            "problemMatcher": []
+        }
+    ]
+}
